@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+ol, ul {
+	padding: 0;
+}
+.hidden {
+	display: none;
+}
+
+/* 컨테이너 */
+#wrap {
+	margin: auto;
+	max-width: 1600px;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+/* 검색 실패 시 스타일 */
+#search_failed {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* 검색폼 */
+#search_form {
+	text-align: center;
+	margin-bottom: 2em;
+}
+#search {
+	width:800px;
+	height:70px;
+	border:1px solid lightsalmon;
+	border-radius:50px;
+	outline:none;
+	font-size:32px;
+	text-align:center;
+}
+
+/* 식당 종류 */
+#ftype_list {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	gap: .5em;
+	margin-bottom:70px;
+}
+
+.ftype {
+	background: lightsalmon;
+	border-radius: 1em;
+	border:1px solid lightsalmon;
+	font-weight:bold;
+	font-size:18px;
+}
+
+.ftype:hover{
+	background: white;
+	border:1px solid lightsalmon;
+	border-radius: 1em;
+	color:lightsalmon;
+}
+
+.ftype a {
+	padding: 0.5em;
+	display: inline-block;
+	white-space: nowrap;
+	color: white;
+	text-decoration: none;
+}
+
+.ftype a:hover{
+	color:lightsalmon;
+}
+
+
+/* 식당 목록 */
+#restaurant_list, .rest {
+	display: flex;
+	flex-flow: row wrap;
+}
+#restaurant_list {
+	justify-content: space-between;
+	gap: 30px;
+}
+.rest {
+	min-width: 400px;
+	flex-basis: 30%;
+	align-items: center;
+	height: 150px;
+}
+
+.cover_image {
+	width: 150px;
+}
+.cover_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.rest .desc {
+	flex: 1;
+	padding: 1em;
+}
+.rest .desc h3 {
+	margin: 0;
+}
+.rest_ftype, .rest_price {
+	display: block;
+}
+.rest_price {
+	font-size: .9em;
+	opacity: .8;
+}
+.view_map {
+	min-width: 100px;
+	height: 100%;
+}
+.map_button {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background: #ff7f4d;
+	border-radius:30px;
+	color:white;
+	font-weight:bold;
+	font-size:18px;
+	border:none;
+}
+
+/* 맵 */
+#naver_map {
+	display: none;
+	flex-basis: 100%;
+	z-index:5;
+	border:1px solid silver;
+}
+#naver_map.active {
+	display: block;
+}
