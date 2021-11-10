@@ -25,7 +25,7 @@ public class FoodDao {
 	
 	
 	
-	// 회원가입 등록
+	// 회원가입 등록....
 	public void signup(HttpServletRequest request,HttpServletResponse response) throws Exception
 	{
 		
